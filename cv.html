@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Aïdan Bouaïcha | Data Scientist & Développeur Fullstack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sidebar:#1f1f1f;
+      --bg-main:#f7f7f7;
+      --card:#ffffff;
+      --ink:#111319;
+      --ink-muted:#5e6475;
+      --accent:#4b6fff;
+      --line:#e5e7ef;
+      --chip:#e9edff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html,body{
+      background:var(--bg-main);
+      color:var(--ink);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    .page{
+      width:210mm;
+      height:297mm;
+      margin:0 auto;
+      display:flex;
+      box-shadow:0 8px 30px rgba(0,0,0,.08);
+      background:var(--bg-main);
+      overflow:hidden;
+      page-break-after:always;
+    }
+    .cv{
+      display:grid;
+      grid-template-columns:260px 1fr;
+      width:100%;
+      height:100%;
+    }
+
+    /* Sidebar */
+    aside.sidebar{
+      background:var(--sidebar);
+      color:#fff;
+      padding:14mm 10mm;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    .brand .name{
+      font-family:Poppins, Inter, sans-serif;
+      font-weight:700;
+      font-size:21px;
+      color:#fff;
+    }
+    .brand .role{
+      color:#d8dcff;
+      font-weight:600;
+      font-size:13px;
+      margin-top:2px;
+    }
+
+    .s-block{border-top:1px solid rgba(255,255,255,.08);padding-top:10px;margin-top:8px;}
+    .s-title{
+      font-family:Poppins, Inter, sans-serif;
+      font-weight:600;
+      font-size:12px;
+      letter-spacing:.4px;
+      text-transform:uppercase;
+      color:#aab0ff;
+      margin-bottom:6px;
+    }
+
+    .contact{display:grid;gap:6px;}
+    .pill{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      color:#f2f4ff;
+      padding:6px 8px;
+      border-radius:10px;
+      font-size:12px;
+    }
+
+    .chips{display:flex;flex-wrap:wrap;gap:6px;}
+    .chip{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      color:#e9ebff;
+      padding:5px 8px;
+      border-radius:10px;
+      font-weight:600;
+      font-size:11.5px;
+    }
+
+    .skills{display:grid;gap:10px;}
+    .skill .label{font-weight:600;font-size:12.5px;color:#f5f6ff;}
+    .bar{height:6px;border-radius:999px;background:rgba(255,255,255,.14);margin-top:4px;overflow:hidden;}
+    .bar i{display:block;height:100%;width:var(--v,80%);background:linear-gradient(90deg,var(--accent),#7d86ff);}
+
+    /* Main */
+    main.content{
+      padding:12mm 14mm;
+      background:var(--bg-main);
+      display:flex;
+      flex-direction:column;
+    }
+    .section{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:8mm;
+      margin-bottom:5mm;
+    }
+    .section h2{
+      font-family:Poppins, Inter, sans-serif;
+      margin-bottom:6px;
+      font-size:15px;
+      color:var(--accent);
+      letter-spacing:.2px;
+    }
+
+    .timeline{display:grid;gap:8px;}
+    .row{display:grid;grid-template-columns:90px 1fr;gap:8px;}
+    .when{font-weight:700;color:#2e3350;font-size:12.5px;}
+    .what .title{font-weight:700;font-size:13.5px;}
+    .what .meta{color:var(--ink-muted);font-size:12px;margin:3px 0;}
+    .what ul{margin-left:16px;padding:0;color:var(--ink-muted);font-size:12.5px;}
+
+    .projects{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+    }
+    .proj{
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:8px;
+      background:var(--card);
+    }
+    .proj h3{margin:0 0 4px;font-size:13px;}
+    .badge{
+      display:inline-block;
+      background:var(--chip);
+      color:#24307a;
+      border:1px solid #cfd6ff;
+      padding:2px 6px;
+      border-radius:999px;
+      font-size:10.5px;
+      font-weight:700;
+      margin-left:4px;
+    }
+    .stack{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px;}
+    .stack .chip{background:#eef1ff;border-color:#dee3ff;color:#2a3390;font-size:10.5px;padding:3px 5px;}
+
+    @page{size:A4;margin:0;}
+    @media print {
+      body{background:white;}
+      .page{box-shadow:none;margin:0;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <div class="cv">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="name">Aïdan Bouaïcha</div>
+          <div class="role">Data Scientist & Développeur Fullstack</div>
+        </div>
+
+        <div class="s-block">
+          <p class="s-title">Contact</p>
+          <div class="contact">
+            <div class="pill">📞 06 95 32 54 06</div>
+            <div class="pill">✉️ aiidanbouaicha@gmail.com</div>
+            <div class="pill">📍 Paris, France</div>
+          </div>
+        </div>
+
+        <div class="s-block">
+          <p class="s-title">Compétences clés</p>
+          <div class="skills">
+            <div class="skill"><span class="label">Python (Pandas, NumPy, Jupyter)</span>
+            <div class="skill"><span class="label">SQL / PostgreSQL / Supabase</span>
+            <div class="skill"><span class="label">React.js / TypeScript</span>
+            <div class="skill"><span class="label">Node.js / APIs</span>
+          </div>
+        </div>
+
+        <div class="s-block">
+          <p class="s-title">Stacks & Outils</p>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Jupyter</span>
+            <span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span>
+            <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Node.js</span>
+            <span class="chip">Tailwind</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">GitHub</span>
+            <span class="chip">Figma</span><span class="chip">Power BI</span>
+          </div>
+        </div>
+
+        <div class="s-block">
+          <p class="s-title">Langues</p>
+          <div class="chips"><span class="chip">Anglais – courant</span><span class="chip">Espagnol – courant</span></div>
+        </div>
+
+        <div class="s-block">
+          <p class="s-title">Atouts</p>
+          <ul style="margin-left:16px;color:#d7daff;font-size:12.5px;">
+            <li>Dynamique et sociable</li>
+            <li>Rigueur analytique & sens du détail</li>
+            <li>Autonomie et collaboration agile</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="section">
+          <h2>Formation</h2>
+          <div class="timeline">
+            <div class="row"><div class="when">2025 – 2027</div><div class="what"><div class="title">Master Data & Business Intelligence</div><div class="meta">Epitech Paris</div></div></div>
+            <div class="row"><div class="when">2024 – 2025</div><div class="what"><div class="title">Concepteur Développeur d’Applications</div><div class="meta">Lycée Louis Jouvet, Taverny</div></div></div>
+            <div class="row"><div class="when">2023 – 2024</div><div class="what"><div class="title">Développeur / Intégrateur Web (Bac +2)</div></div></div>
+            <div class="row"><div class="when">2015 – 2016</div><div class="what"><div class="title">Bac STG SI</div><div class="meta">Lycée Guy de Maupassant, Colombes</div></div></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Expériences</h2>
+          <div class="timeline">
+            <div class="row"><div class="when">2018</div><div class="what"><div class="title">SEO Developer</div><div class="meta">Top Content – Malte</div><ul><li>Rédaction & intégration de contenus multilingues</li><li>Optimisation SEO et suivi de performances</li></ul></div></div>
+            <div class="row"><div class="when">2016 – 2017</div><div class="what"><div class="title">Conseiller clientèle</div><div class="meta">EDF – Nanterre</div><ul><li>Gestion des demandes & accompagnement personnalisé</li></ul></div></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Mes Projets</h2>
+          <div class="projects">
+            <article class="proj"><h3>💪 MySelf Hero <span class="badge">Projet personnel</span></h3><p>Application web de suivi sportif & nutritionnel : profil héros, repas, activités, besoins journaliers, graphiques de progression.</p><div class="stack"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Tailwind</span><span class="chip">Supabase</span></div></article>
+            <article class="proj"><h3>🧬 VaccinData <span class="badge">Hackathon Élysée × Epitech 2025</span></h3><p>Site & algorithmes d’analyse de données pour mesurer l’efficacité des campagnes de vaccination et orienter les décisions futures.</p><div class="stack"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">DataViz</span></div></article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <div class="cv">
+      <aside class="sidebar"></aside>
+      <main class="content">
+        <section class="section">
+          <h2>Mes Projets</h2>
+          <div class="projects">
+            <article class="proj"><h3>💼 Analyse Banque (Clustering) <span class="badge">Projet personnel</span></h3><p>Analyse prédictive à partir de données CSV bancaires avec clustering Jupyter pour déterminer les bons ou mauvais clients potentiels.</p><div class="stack"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Jupyter</span><span class="chip">Clustering</span></div></article>
+            <article class="proj"><h3>💊 Analyse ventes pharmaceutiques <span class="badge">Projet personnel</span></h3><p>Exploration & visualisation de ventes pharmaceutiques. Interface Tkinter avec graphiques issus d’analyses Pandas/Jupyter.</p><div class="stack"><span class="chip">Python</span><span class="chip">Tkinter</span><span class="chip">Pandas</span></div></article>
+            <article class="proj"><h3>💰 Expense Tracker <span class="badge">Projet personnel</span></h3><p>API REST sécurisée pour la gestion des dépenses : Auth JWT, CRUD, protection des routes, tests Postman.</p><div class="stack"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">JWT</span></div></article>
+            <article class="proj" style="grid-column:1/-1"><h3>📚 Manga World <span class="badge">Projet personnel</span></h3><p>Application communautaire : comptes, listes, notes, commentaires. Intégration API Jikan, sécurité, Docker & CI simple.</p><div class="stack"><span class="chip">React</span><span class="chip">Node</span><span class="chip">Docker</span></div></article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
