@@ -58,7 +58,7 @@ export default function AddMealModal({ onClose, onSuccess }: AddMealModalProps) 
     }
   };
 
-  /** 🔥 Calcul des calories selon la quantité */
+  /**  Calcul des calories selon la quantité */
   const calculateCalories = () => {
     if (!selectedFood || !grams) return 0;
     return Math.round((selectedFood.calories_per_100g * parseFloat(grams)) / 100);
